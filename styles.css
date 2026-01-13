@@ -269,10 +269,33 @@ svg {
     color: var(--color-text-light);
 }
 
+/* Mobile First Adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero--home .hero__title {
+        font-size: 3rem;
+    }
+
+    .stats-grid {
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+}
+
 /* Features Grid (Home) */
 .features__grid {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
