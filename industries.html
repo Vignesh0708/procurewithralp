@@ -30,149 +30,182 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
     <!-- Using Heroicons for scalable icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <a href="index.html" class="logo">
-                <img src="./images/Black And White Rakia Design Studio Logo (2) 1.svg"
-                    alt="RALP - Smart Procurement Logo" width="100">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50 border-b">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./images/Black And White Rakia Design Studio Logo (2) 1.svg" class="h-20" alt="RALP Logo" />
             </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Home</a></li>
-                    <li><a href="products.html" class="nav__link">Products</a></li>
-                    <li><a href="industries.html" class="nav__link active">Industries</a></li>
-                    <li><a href="why-ralp.html" class="nav__link">Why RALP</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="about.html" class="nav__link">About</a></li>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="contact.html" class="btn btn--primary text-base px-6 py-3">Get
+                    a Quote</a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+                    </li>
+                    <li>
+                        <a href="industries.html"
+                            class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                            aria-current="page">Industries</a>
+                    </li>
+                    <li>
+                        <a href="why-ralp.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Why
+                            RALP</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
                 </ul>
-            </nav>
-            <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+            </div>
         </div>
-    </header>
+    </nav>
+    <section class="hero">
+        <div class="container hero__container">
 
-    <main>
-        <section class="hero">
-            <div class="container hero__container">
-                <span class="badge">INDUSTRIES</span>
-                <h1 class="hero__title">Industries We Serve</h1>
-                <p class="hero__subtitle">From tech giants to manufacturing plants, we provide specialized procurement
-                    solutions tailored to your unique operational requirements.</p>
-            </div>
-        </section>
+            <h1 class="hero__title">Industries We Serve</h1>
+            <p class="hero__subtitle">From tech giants to manufacturing plants, we provide specialized procurement
+                solutions tailored to your unique operational requirements.</p>
+        </div>
+    </section>
 
-        <section class="industries">
-            <div class="container">
-                <div class="industries__grid">
-                    <!-- Information Technology -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="monitor" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">Information Technology</h3>
-                        <p class="card__description">Supporting tech companies, IT services firms, and software houses.
-                        </p>
-                        <ul class="card__list">
-                            <li>IT hardware</li>
-                            <li>Office equipment</li>
-                            <li>Server room infrastructure</li>
-                            <li>Workstations</li>
-                        </ul>
+    <section class="industries">
+        <div class="container">
+            <div class="industries__grid">
+                <!-- Information Technology -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="monitor" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">Information Technology</h3>
+                    <p class="card__description">Supporting tech companies, IT services firms, and software houses.
+                    </p>
+                    <ul class="card__list">
+                        <li>IT hardware</li>
+                        <li>Office equipment</li>
+                        <li>Server room infrastructure</li>
+                        <li>Workstations</li>
+                    </ul>
+                </div>
 
-                    <!-- Aerospace & Drone Tech -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="plane" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">Aerospace & Drone Tech</h3>
-                        <p class="card__description">Specialized sourcing for aviation and unmanned systems developers.
-                        </p>
-                        <ul class="card__list">
-                            <li>Precision components</li>
-                            <li>Specialized tools</li>
-                            <li>Testing equipment</li>
-                            <li>Safety materials</li>
-                        </ul>
+                <!-- Aerospace & Drone Tech -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="plane" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">Aerospace & Drone Tech</h3>
+                    <p class="card__description">Specialized sourcing for aviation and unmanned systems developers.
+                    </p>
+                    <ul class="card__list">
+                        <li>Precision components</li>
+                        <li>Specialized tools</li>
+                        <li>Testing equipment</li>
+                        <li>Safety materials</li>
+                    </ul>
+                </div>
 
-                    <!-- Manufacturing -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="factory" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">Manufacturing</h3>
-                        <p class="card__description">End-to-end procurement for production facilities and assembly
-                            plants.</p>
-                        <ul class="card__list">
-                            <li>Industrial supplies</li>
-                            <li>MRO products</li>
-                            <li>Safety equipment</li>
-                            <li>Consumables</li>
-                        </ul>
+                <!-- Manufacturing -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="factory" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">Manufacturing</h3>
+                    <p class="card__description">End-to-end procurement for production facilities and assembly
+                        plants.</p>
+                    <ul class="card__list">
+                        <li>Industrial supplies</li>
+                        <li>MRO products</li>
+                        <li>Safety equipment</li>
+                        <li>Consumables</li>
+                    </ul>
+                </div>
 
-                    <!-- Facility Management -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="building-2" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">Facility Management</h3>
-                        <p class="card__description">Complete solutions for commercial buildings and construction sites.
-                        </p>
-                        <ul class="card__list">
-                            <li>Cleaning supplies</li>
-                            <li>Maintenance materials</li>
-                            <li>Safety/PPE</li>
-                            <li>Tools & hardware</li>
-                        </ul>
+                <!-- Facility Management -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="building-2" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">Facility Management</h3>
+                    <p class="card__description">Complete solutions for commercial buildings and construction sites.
+                    </p>
+                    <ul class="card__list">
+                        <li>Cleaning supplies</li>
+                        <li>Maintenance materials</li>
+                        <li>Safety/PPE</li>
+                        <li>Tools & hardware</li>
+                    </ul>
+                </div>
 
-                    <!-- Automotive -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="car" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">Automotive</h3>
-                        <p class="card__description">Tailored procurement for dealerships and service centers.</p>
-                        <ul class="card__list">
-                            <li>Car care products</li>
-                            <li>Workshop tools</li>
-                            <li>Showroom supplies</li>
-                            <li>Consumables</li>
-                        </ul>
+                <!-- Automotive -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="car" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">Automotive</h3>
+                    <p class="card__description">Tailored procurement for dealerships and service centers.</p>
+                    <ul class="card__list">
+                        <li>Car care products</li>
+                        <li>Workshop tools</li>
+                        <li>Showroom supplies</li>
+                        <li>Consumables</li>
+                    </ul>
+                </div>
 
-                    <!-- R&D Labs -->
-                    <div class="card">
-                        <div class="card__icon-wrapper">
-                            <i data-lucide="flask-conical" class="card__icon"></i>
-                        </div>
-                        <h3 class="card__title">R&D Labs</h3>
-                        <p class="card__description">Supporting research facilities and corporate headquarters.</p>
-                        <ul class="card__list">
-                            <li>Lab equipment</li>
-                            <li>Office infrastructure</li>
-                            <li>Specialized instruments</li>
-                            <li>Documentation</li>
-                        </ul>
+                <!-- R&D Labs -->
+                <div class="card">
+                    <div class="card__icon-wrapper">
+                        <i data-lucide="flask-conical" class="card__icon"></i>
                     </div>
+                    <h3 class="card__title">R&D Labs</h3>
+                    <p class="card__description">Supporting research facilities and corporate headquarters.</p>
+                    <ul class="card__list">
+                        <li>Lab equipment</li>
+                        <li>Office infrastructure</li>
+                        <li>Specialized instruments</li>
+                        <li>Documentation</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section class="cta">
-            <div class="container cta__container">
-                <h2 class="cta__title">Your Industry. Our Expertise.</h2>
-                <div class="cta__actions">
-                    <a href="contact.html" class="btn btn--primary">Discuss Your Requirements</a>
-                </div>
+        </div>
+    </section>
+    <div style="width: 100%;height: 5vh;"></div>
+    <section class="cta">
+        <div class="container cta__container">
+            <h2 class="cta__title">Your Industry. Our Expertise.</h2>
+            <div class="cta__actions">
+                <a href="contact.html" class="btn btn--primary">Discuss Your Requirements</a>
             </div>
-        </section>
+        </div>
+    </section>
+    <div style="width: 100%;height: 5vh;"></div>
     </main>
 
     <footer class="footer">
@@ -181,7 +214,7 @@
                 <div class="logo logo--footer">RALP</div>
                 <p class="footer__desc">Smart procurement solutions for modern enterprises. Streamlining your supply
                     chain with precision and reliability.</p>
-                <div class="footer__copyright">© 2024 RALP. All rights reserved.</div>
+                <div class="footer__copyright">© 2026 RALP. All rights reserved.</div>
             </div>
 
             <div class="footer__col">
@@ -214,6 +247,10 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts.js"></script>
+    <script src="https://unpkg.com/flowbite@2.5.1/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
     </script>

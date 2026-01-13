@@ -30,35 +30,68 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <a href="index.html" class="logo">
-                <img src="./images/Black And White Rakia Design Studio Logo (2) 1.svg"
-                    alt="RALP - Smart Procurement Logo" width="100">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50 border-b">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./images/Black And White Rakia Design Studio Logo (2) 1.svg" class="h-20" alt="RALP Logo" />
             </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Home</a></li>
-                    <li><a href="products.html" class="nav__link">Products</a></li>
-                    <li><a href="industries.html" class="nav__link">Industries</a></li>
-                    <li><a href="why-ralp.html" class="nav__link active">Why RALP</a></li>
-                    <li><a href="contact.html" class="nav__link">Contact</a></li>
-                    <li><a href="about.html" class="nav__link">About</a></li>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="contact.html" class="btn btn--primary text-base px-6 py-3">Get
+                    a Quote</a>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+                    </li>
+                    <li>
+                        <a href="industries.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Industries</a>
+                    </li>
+                    <li>
+                        <a href="why-ralp.html"
+                            class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                            aria-current="page">Why RALP</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
                 </ul>
-            </nav>
-            <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main>
         <!-- Why RALP Hero -->
         <section class="hero">
             <div class="container hero__container">
-                <span class="badge">WHY CHOOSE RALP</span>
+
                 <h1 class="hero__title">Why Choose RALP</h1>
                 <p class="hero__subtitle">Companies don't choose RALP for products. They choose RALP for consistency,
                     trust, and peace of mind.</p>
@@ -298,7 +331,7 @@
         <section class="brands">
             <div class="container">
                 <div class="brands__header">
-                    <span class="badge" style="margin-bottom: 1rem;">BRANDS</span>
+
                     <h2 class="section__title">Brands We Support</h2>
                     <p class="section__subtitle" style="margin-top: 1rem;">Direct access to industry-leading
                         manufacturers and global brands.</p>
@@ -330,6 +363,7 @@
                         <div class="brand-item"><img src="./images/acer.png" alt="Acer"></div>
                         <div class="brand-item"><img src="./images/apple.jfif" alt="Apple"></div>
                         <div class="brand-item"><img src="./images/lenovo.png" alt="Lenovo"></div>
+                        <div class="brand-item"><img src="./images/msi.png" alt="MSI"></div>
                         <div class="brand-item"><img src="./images/hp.png" alt="Hp"></div>
                         <div class="brand-item"><img src="./images/dell.png" alt="Dell"></div>
                         <div class="brand-item"><img src="./images/samsung.png" alt="samsung"></div>
@@ -366,6 +400,7 @@
                         <div class="brand-item"><img src="./images/acer.png" alt="Acer"></div>
                         <div class="brand-item"><img src="./images/apple.jfif" alt="Apple"></div>
                         <div class="brand-item"><img src="./images/lenovo.png" alt="Lenovo"></div>
+                        <div class="brand-item"><img src="./images/msi.png" alt="MSI"></div>
                         <div class="brand-item"><img src="./images/hp.png" alt="Hp"></div>
                         <div class="brand-item"><img src="./images/dell.png" alt="Dell"></div>
                         <div class="brand-item"><img src="./images/samsung.png" alt="samsung"></div>
@@ -461,7 +496,7 @@
         <section class="testimonials">
             <div class="container">
                 <div class="testimonials__header">
-                    <span class="badge" style="margin-bottom: 1rem;">Testimonials</span>
+
                     <h2 class="section__title">What they say about us</h2>
                     <p class="section__subtitle">With a huge number of clients served here's what they have to say</p>
                 </div>
@@ -484,10 +519,11 @@
                                 <i data-lucide="star"></i>
                                 <i data-lucide="star" class="star-muted"></i>
                             </div>
-                            <p class="testimonial-card__content">"RALP Company has been a reliable partner for our
-                                export and import requirements. Their logistics planning and documentation support
-                                helped us reduce delays and costs. Professional team with strong supply chain knowledge.
-                                Highly recommended for B2B businesses in Chennai"</p>
+                            <p class="testimonial-card__content">"RALP has been an excellent procurement partner for our
+                                IT requirements. From laptops and networking components to accessories, the quality of
+                                products and reliability of supply have been consistently impressive. Their team
+                                understands IT procurement challenges and ensures timely delivery with complete
+                                transparency."</p>
                             <div class="testimonial-card__footer">
                                 <span class="testimonial-card__location"><i data-lucide="map-pin"
                                         style="width: 14px;"></i> Chennai, India</span>
@@ -507,10 +543,11 @@
                                 <i data-lucide="star"></i>
                                 <i data-lucide="star" class="star-muted"></i>
                             </div>
-                            <p class="testimonial-card__content">"We have been working with RALP Company for procurement
-                                and international sourcing. Their transparent process and timely updates gave us
-                                complete confidence. Smooth coordination from supplier to delivery. Very dependable
-                                service."</p>
+                            <p class="testimonial-card__content">"Managing multiple vendors was a challenge until we
+                                partnered with RALP. Their single-vendor procurement model has streamlined our
+                                purchasing process, reduced coordination effort, and improved efficiency. From IT and
+                                safety products to routine corporate supplies, everything is handled seamlessly under
+                                one roof."</p>
                         </div>
                         <div class="testimonial-card__header" style="margin-bottom: 0; margin-top: 1rem;">
                             <img src="./images/n.png" alt="Neha P." class="testimonial-card__avatar">
@@ -524,10 +561,10 @@
                     <!-- Card 3: 400+ Stats - Span 1 -->
                     <div class="testimonial-card stat-card">
                         <div class="stat-card__visual"
-                            style="background-color: #f0f4f8; border-bottom: 1px solid #e2e8f0;">
+                            style="background-image: url('./images/delivery-person-handing-package-smiling-woman-door.jpg');">
                         </div>
                         <div class="stat-card__content">
-                            <div class="stat-card__number">400+</div>
+                            <div class="stat-card__number">100+</div>
                             <p class="stat-card__label">Companies served</p>
                         </div>
                     </div>
@@ -535,10 +572,10 @@
                     <!-- Card 4: 900+ Stats - Span 1 -->
                     <div class="testimonial-card stat-card">
                         <div class="stat-card__visual"
-                            style="background-color: #f7fafc; border-bottom: 1px solid #e2e8f0;">
+                            style="background-image: url('./images/hard-working-businessmen.jpg');">
                         </div>
                         <div class="stat-card__content">
-                            <div class="stat-card__number">900+</div>
+                            <div class="stat-card__number">249+</div>
                             <p class="stat-card__label">Customers Satisfied</p>
                         </div>
                     </div>
@@ -553,9 +590,9 @@
                                 <i data-lucide="star" class="star-muted"></i>
                                 <i data-lucide="star" class="star-muted"></i>
                             </div>
-                            <p class="testimonial-card__content">"RALP Company supported us with end-to-end export
-                                logistics through Chennai port. From customs clearance to shipment tracking, everything
-                                was handled efficiently. Their team understands B2B export challenges very well."</p>
+                            <p class="testimonial-card__content">"RALP delivers reliable safety equipment and tools that
+                                meet required standards. Their timely supply and consistent quality make them a trusted
+                                procurement partner."</p>
                         </div>
                         <div class="testimonial-card__header" style="margin-bottom: 0; margin-top: 1rem;">
                             <img src="./images/a.png" alt="Jason T." class="testimonial-card__avatar">
@@ -583,9 +620,8 @@
                                 <i data-lucide="star"></i>
                                 <i data-lucide="star" class="star-muted"></i>
                             </div>
-                            <p class="testimonial-card__content">"Excellent import logistics support from RALP Company.
-                                They managed our shipments professionally and ensured on-time delivery. Clear
-                                communication and quick response made the entire process hassle-free"
+                            <p class="testimonial-card__content">"RALP is a dependable procurement partner known for
+                                quality products, professional service, and on-time delivery."
                             </p>
                             <div class="testimonial-card__footer">
                                 <span class="testimonial-card__location"><i data-lucide="map-pin"
@@ -622,7 +658,7 @@
                 <div class="logo logo--footer">RALP</div>
                 <p class="footer__desc">Smart procurement solutions for modern enterprises. Streamlining your supply
                     chain with precision and reliability.</p>
-                <div class="footer__copyright">© 2024 RALP. All rights reserved.</div>
+                <div class="footer__copyright">© 2026 RALP. All rights reserved.</div>
             </div>
 
             <div class="footer__col">
@@ -655,6 +691,10 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts.js"></script>
+    <script src="https://unpkg.com/flowbite@2.5.1/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
     </script>
