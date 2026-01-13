@@ -34,7 +34,48 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
     <!-- Using Heroicons for scalable icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Industrial Procurement",
+      "provider": {
+        "@type": "Organization",
+        "name": "RALP"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Industry Procurement Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Infrastructure Sourcing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Manufacturing Supply Chain"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aerospace Component Sourcing"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -96,8 +137,8 @@
     </nav>
     <section class="hero">
         <div class="container hero__container">
-
-            <h1 class="hero__title">Industries We Serve</h1>
+            <span class="badge badge--accent">SECTOR EXPERTISE</span>
+            <h1 class="hero__title">Dominate Every Sector<br>with Specialized Procurement</h1>
             <p class="hero__subtitle">From tech giants to manufacturing plants, we provide specialized procurement
                 solutions tailored to your unique operational requirements.</p>
         </div>
