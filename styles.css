@@ -60,6 +60,16 @@ a {
     transition: color 0.2s;
 }
 
+.bg-blue-700 {
+    background-color: #F59F0A !important;
+    padding: 20px 30px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
 ul {
     list-style: none;
 }
