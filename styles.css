@@ -1407,3 +1407,37 @@ svg {
         height: 28px;
     }
 }
+
+/* Footer Social Icons */
+.footer__social {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__social-link:hover {
+    background-color: var(--color-accent-start);
+    color: var(--color-bg-dark);
+    transform: translateY(-3px);
+    border-color: var(--color-accent-start);
+}
+
+.footer__social-link svg {
+    width: 18px;
+    height: 18px;
+}
